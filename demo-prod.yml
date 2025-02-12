@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: demo-prod
+
+server:
+  port: 0
+
+eureka:
+  instance:
+    instance-id: "${spring.application.name}:${random.value}"
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
